@@ -1,20 +1,108 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+}
+
+/* Logo */
+.logo-container img {
+  width: 200px;
+  max-width: 80%;
+  height: auto;
+}
+
+/* Navegação */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+nav a {
+  margin: 5px;
+  font-size: 1rem;
+}
+
+/* Seções */
+section {
+  padding: 1.5rem;
+  margin: 1rem;
+}
+
+/* Grid da equipe */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1.5rem;
+  justify-items: center;
+}
+
+.team-member {
+  max-width: 180px;
+}
+
+.team-member img {
+  width: 100px;
+  height: 100px;
+}
+
+/* Galeria de projetos */
+.galeria-item > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
 .galeria-item img {
-    transition: transform 0.3s ease;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+}
+
+/* Imagens e iframe do mapa */
+iframe {
+  width: 100%;
+  max-width: 500px;
+  height: 300px;
+}
+
+/* Media Queries para tablets */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .galeria-item img:hover {
-    transform: scale(1.1);
-  }@keyframes zoomIn {
-    from {
-      transform: scale(0.9);
-      opacity: 0;
-    }
-    to {
-      transform: scale(1);
-      opacity: 1;
-    }
+
+  .box {
+    padding: 1.5rem;
   }
-  
-  .zoom-in {
-    animation: zoomIn 0.6s ease-in-out forwards;
+
+  .logo-container img {
+    width: 150px;
   }
+}
+
+/* Media Queries para celulares */
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  p {
+    font-size: 0.95rem;
+    text-align: center;
+  }
+
+  .team-member img {
+    width: 80px;
+    height: 80px;
+  }
+
+  footer {
+    font-size: 0.85rem;
+  }
+}
